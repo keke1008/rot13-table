@@ -1,0 +1,21 @@
+:root {
+  --foreground-color: rgb(20 20 20);
+  --background-color: rgb(256 256 256);
+  --hover-background-color: rgb(256 256 256);
+
+  @media (prefers-color-scheme: dark) {
+    --foreground-color: rgb(200 200 200);
+    --background-color: rgb(20 20 20);
+    --hover-background-color: rgb(50 50 50);
+  }
+}
+
+body {
+  font-family: monospace;
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+hr {
+  background: var(--foreground-color);
+}

@@ -1,3 +1,4 @@
+import styles from "./Table.module.css";
 import { LookupTable } from "../lookup";
 import { Pair } from "./Pair";
 
@@ -7,13 +8,7 @@ export interface Props {
 
 export const Table = ({ lookup: table }: Props) => {
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(2rem, 1fr))",
-        gap: "0.5rem",
-      }}
-    >
+    <div className={styles.table}>
       {table.origin.split("").map((origin, index) => (
         <Pair key={origin} origin={origin} converted={table.converted[index]} />
       ))}

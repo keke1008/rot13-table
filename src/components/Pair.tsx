@@ -1,3 +1,5 @@
+import styles from "./Pair.module.css";
+
 export interface Props {
   origin: string;
   converted: string;
@@ -5,21 +7,9 @@ export interface Props {
 
 export const Pair = ({ origin, converted }: Props) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-
-        borderRadius: "0.3rem",
-        boxShadow: "0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1)",
-        paddingInline: "0.3rem",
-        paddingBlock: "0.2rem",
-      }}
-    >
+    <div className={styles.pair}>
       <div>{origin}</div>
-      <hr style={{ width: "1rem" }} />
+      <hr className={styles.bar} />
       <div>{converted}</div>
     </div>
   );

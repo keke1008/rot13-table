@@ -1,3 +1,4 @@
+import styles from "./Header.module.css";
 import { LookupTableName, LookupTables } from "../lookup";
 
 export interface Props {
@@ -10,13 +11,7 @@ export const Header = ({
   setCurrentLookupTableName,
 }: Props) => {
   return (
-    <header
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
+    <header className={styles.header}>
       <h1>{currentLookupTableName} Table</h1>
       <select
         value={currentLookupTableName}

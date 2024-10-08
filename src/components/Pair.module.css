@@ -1,0 +1,22 @@
+.pair {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
+  padding-inline: 0.3rem;
+  padding-block: 0.2rem;
+
+  background-color: var(--hover-background-color);
+
+  @media (prefers-color-scheme: light) {
+    box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1);
+  }
+}
+
+.bar {
+  border: 0;
+  width: 1rem;
+  height: 1px;
+}
